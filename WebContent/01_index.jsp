@@ -10,11 +10,11 @@
 #topbar {
 	margin-top: 5%;
 	margin-bottom: 5%;
-	background-image: url('redbar.PNG');
+	background-image: url('images/redbar.PNG');
 	height: 10%;
 }
 #left {
-	background-image: url('images.png');
+	background-image: url('images/images.png');
 	width: 20%;
 	height: 20%;
 	float: left;
@@ -31,22 +31,22 @@
 	margin-right: 5%;
 }
 #sil {
-	background-image: url('실시간예약.jpg');
+	background-image: url('images/실시간예약.jpg');
 	width: 105px;
 	height: 29px;
 }
 #jang {
-	background-image: url('장기견적.jpg');
+	background-image: url('images/장기견적.jpg');
 	width: 105px;
 	height: 29px;
 }
 #qna {
-	background-image: url('Q&A.jpg');
+	background-image: url('images/Q&A.jpg');
 	width: 105px;
 	height: 29px;
 }
 #hoi {
-	background-image: url('회원가입.jpg');
+	background-image: url('images/회원가입.jpg');
 	width: 105px;
 	height: 29px;
 }
@@ -68,7 +68,7 @@
 			<fieldset>
 				<table>
 					<tr>
-						<td><img src="images.jpg"></td>
+						<td><img src="images/images.jpg"></td>
 					</tr>
 				</table>
 			</fieldset>
