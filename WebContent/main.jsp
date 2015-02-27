@@ -7,8 +7,7 @@
 <title>Insert title here</title>
 <style type="text/css">
 #left {
-	background-image: url('images.png');
-	width: 20%;
+	width: 25%;
 	height: 20%;
 	float: left;
 	margin-left: 10%;
@@ -22,7 +21,7 @@
 		<fieldset>
 			<table>
 				<tr>
-					<td><img src="images.jpg"></td>
+					<td><img src="images/images.jpg"></td>
 				</tr>
 			</table>
 		</fieldset>
