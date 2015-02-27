@@ -30,7 +30,7 @@
 					</tr>
 					<tr>
 						<td colspan="2" align="right"><input type="button"
-							value="로그인" onclick="move_to(this.form,'/CarRentSystem/ContController')"/> <input type="button" value="회원가입" /></td>
+							value="로그인" onclick="move_to(this.form,'/CarRentSystem/CustController')"/> <input type="button" value="회원가입" /></td>
 					</tr>
 				</table>
 			</form>	
