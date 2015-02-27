@@ -4,8 +4,13 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
 <mapper namespace="client">
-	<select id="list" parameterType="String" resultType="com.hb.Vo">
-	   select * from shop_T where category = #{catagory}
+	<select id="login" resultType="com.carrent.vo" parameterType="String">
+		SELECT CUST_ID, CUST_PWD, CUST_NAME, CUST_GENDER ,
+              CUST_BIRTHDAY, CUST_PHONE , ZIP_CODE,
+              BAS_ADDR, EXT_ADDR, CUST_EMAIL, LICENSE_TYPE,
+              LICENSE_FDATE, LICENSE_TDATE, REG_DATE, MOD_DATE 
+        FROM  T_CUST
+        WHERE CUST_ID = #{CUST_ID} AND CUST_PWD = #{CUST_PWD}
 	</select>
 </mapper>
 
