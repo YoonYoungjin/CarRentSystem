@@ -5,12 +5,30 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
+<script type="text/javascript" src="./js/jquery-1.11.2.js" charset="utf-8"></script>
+<script type="text/javascript">
+$(function(){
+	$("#topbar").load('bar.jsp');
+});
+$(function(){
+	$("#right").load('login.jsp');
+});
+
+$(function(){
+	$("#left").load('main.jsp');
+});
+</script>
 </head>
 <body>
-
-
-
-
-
+<body>
+	<div id="wrap" align="center">
+		<div id="topbar">
+		</div>
+		<div id="left">
+		</div>
+		<div id="right">
+		</div>
+	</div>
+</body>
 </body>
 </html>
