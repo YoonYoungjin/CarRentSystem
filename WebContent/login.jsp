@@ -15,6 +15,7 @@
 	margin-right: 5%;
 }
 </style>
+<script type="text/javascript" src="js/move.js" charset="utf-8"></script>
 </head>
 <body>
 <div id="right">
