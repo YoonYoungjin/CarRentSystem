@@ -5,42 +5,45 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Q&A(답글)</title>
+<style>
+ input{border:solid gray 1px}
+ table{width:100%}
+ tr,th,td{border:1px gray solid; text-align:center;padding:3px}
+ th{color: purple;}
+ h3{text-align:center; color: red;}
+</style>
+<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
 </head>
 <body>
-	<div>
-		<table align="center" height="90" >
-			<tr>
-				<td>
-					<input type="button" value="차량등록" onclick="javascript:location.href='admCarAdd.jsp'">
-					<input type="button" value="요금관리" onclick="javascript:location.href='admCarFeeInfo.jsp'">
-					<input type="button" value="예약관리" onclick="javascript:location.href='admCustContInfo.jsp'">
-					<input type="button" value="Q & A" onclick="javascript:location.href='admQnaInfo.jsp'">
-					<input type="button" value="장기견적관리" onclick="javascript:location.href='admEstmInquiryInfo.jsp'">
-					<input type="button" value="회원관리" onclick="javascript:location.href='admCustInfo.jsp'">
-				</td>
-			</tr>
-		</table>
-	</div>
-	<div>
-		<fieldset>
-		<table align="center" width="600" height="300">
-			<tr >
-				<td>ID:&nbsp;&nbsp;관리자</td>
-			</tr>
-			<tr>
-				<td>
-					&nbsp;내용:<br/>
-					<textarea style="width: 100%; height: 80%;"></textarea>
-				</td>
-			</tr>
-			<tr align="right">
-				<td>
-					<input type="button" value="올리기" style="background-color:#99ccff" /> &nbsp;
-					<input type="button" value="삭제" style="background-color:#99ccff"/> 
-				</td>
-			</tr>
-		</table>
-		</fieldset>
-	</div>
+<form method="post" name="f">
+	<table height="100" >
+		<tr	bgcolor="pink">
+			<td>
+				<input type="button" value="차량등록" onclick="javascript:location.href='admCarAdd.jsp'">
+				<input type="button" value="요금관리" onclick="javascript:location.href='admCarFeeInfo.jsp'">
+				<input type="button" value="예약관리" onclick="javascript:location.href='admCustContInfo.jsp'">
+				<input type="button" value="Q & A" onclick="javascript:location.href='admQnaInfo.jsp'">
+				<input type="button" value="장기견적관리" onclick="javascript:location.href='admEstmInquiryInfo.jsp'">
+				<input type="button" value="회원관리" onclick="javascript:location.href='admCustInfo.jsp'">
+			</td>
+		</tr>
+	</table>
+	<h3>○ Q&A답글</h3>
+	<table>
+		<tr>
+			<th>
+			ID : 관리자<br/><br/>
+			내용 : <br/>
+				<textarea style="width: 70%; height: 200px;"></textarea>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" value="올리기" style="background-color:#99ccff" onclick=""/> &nbsp;
+				<input type="button" value="삭제" style="background-color:#99ccff" onclick=""/>
+			</td>
+		</tr>
+	</table>
+</form>
 </body>
 </html>

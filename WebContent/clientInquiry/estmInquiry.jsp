@@ -5,11 +5,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>장기견적문의</title>
+<style>
+ input{border:solid gray 1px;}
+ table{width:100%}
+ th,td{border:1px gray solid; text-align:center;padding:3px}
+ th{color: purple;}
+ h3{color: navy;}
+</style>
+<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
 </head>
 <body>
-<form>
-	<table cellpadding="50" align="center">
-		<tr align="center">
+<form name="f" method="post">
+	<table height="100">
+		<tr bgcolor="pink">
 			<td>
 				<input type="button" value="홈으로" onclick="javascript:location.href='index.jsp'">
 				<input type="button" value="실시간예약" onclick="javascript:location.href='contCar.jsp'"/>
@@ -19,9 +27,12 @@
 			</td>
 		</tr>
 	</table>
-	<table border="1" align="center" width="500" height="400">
+	<table>
 		<tr>
-			<td style="text-align: left;"><br>
+			<td bgcolor="lightgray"><h3> ● 장기견적문의</h3></td>
+		</tr>
+		<tr>
+			<th><br>
 				성명 : <input type="text" name=""/><br><br>
 				연락처 : <input type="text" name=""/><br><br>
 				자동차유형 : <input type="radio" name="" value=""/>소형
@@ -48,10 +59,10 @@
 				<br><br>
 				차종 : <input type="text" name=""/>
 				<br><br>
-			</td>	
+			</th>	
 		</tr>
 		<tr>
-			<td align="right">
+			<td>
 			<input type="button" value="예약하기" style="background-color:#99ccff" onclick=""/>
 			<input type="reset" value="취소" style="background-color:#99ccff"/>
 			</td>

@@ -5,11 +5,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원관리(회원정보조회)->세부조회</title>
+<style>
+ input{border:solid gray 1px}
+ table{width:100%}
+ tr,th,td{border:1px gray solid; text-align:center;padding:3px}
+ th{color: purple;}
+ h3{text-align:center; color: red;}
+</style>
+<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
 </head>
 <body>
-<div align="center" >
-	<table align="center" cellpadding="32">
-		<tr>
+<form method="post" name="f">
+	<table height="100" >
+		<tr	bgcolor="pink">
 			<td colspan="6">
 				<input type="button" value="차량등록" onclick="javascript:location.href='admCarAdd.jsp'">
 				<input type="button" value="요금관리" onclick="javascript:location.href='admCarFeeInfo.jsp'">
@@ -20,77 +28,72 @@
 			</td>
 		</tr>
 	</table>
-</div>
-<div align="center">
-	<h3 align="center">○ 회원 정보 조회</h3>
-		<fieldset style="width: 550px;">
-			<table width="500" align="center">
-				<tr>
-					<td colspan="2" align="left"><h2>회원정보</h2></td>
-				</tr>
-				<tr>
-					<td>아이디</td>
-					<td><input type="text" name="id" value="id" readOnly></td>
-				</tr>
-				<tr>
-					<td>이름</td>
-					<td><input type="text" name="name" value="name" readOnly></td>
-				</tr>
-				<tr>
-					<td>생년월일</td>
-					<td><input type="text" name="" value="" readOnly></td>
-					
-				</tr>
-				<tr>
-					<td>성별</td>
-					<td><input type="text" name="" value="" readOnly></td>
-				</tr>
-				<tr>
-					<td>주소</td>
-					<td><input type="text" name="addr" value="addr" readOnly></td>
-				</tr>
-				<tr>
-					<td>번호</td>
-					<td><input type="text" name="number" value="number" readOnly></td>
-				</tr>
-				<tr>
-					<td>Email</td>
-					<td><input type="text" name="email" value="email" readOnly></td>
-				</tr>
-			</table>
-			<hr />
-			<table width="500" align="center">
-				<tr>
-					<td colspan="2" align="left"><h2>운전면허정보</h2></td>
-				</tr>
-				<tr>
-					<td>면허구분</td>
-					<td><input type="text" name="" value="" readOnly></td>
-				</tr>
-				<tr>
-					<td>면허종류</td>
-					<td><input type="text" name="" value="" readOnly></td>
-				</tr>
-				<tr>
-					<td>면허증번호</td>
-					<td><input type="text" name="lic_num" value="lic_num" readOnly></td>
-				</tr>
-				<tr>
-					<td>면허발급일자</td>
-					<td><input type="text" name="lic_date " value="lic_date" readOnly></td>
+	<h3>○ 회원 정보 조회</h3>
+	<table>
+		<tr>
+			<td colspan="2" align="left"><h3>회원정보</h3></td>
+		</tr>
+		<tr>
+			<th>아이디</th>
+			<td><input type="text" name="id" value="id" readOnly></td>
+		</tr>
+		<tr>
+			<th>이름</th>
+			<td><input type="text" name="name" value="name" readOnly></td>
+		</tr>
+		<tr>
+			<th>생년월일</th>
+			<td><input type="text" name="" value="" readOnly></td>
+			
+		</tr>
+		<tr>
+			<th>성별</th>
+			<td><input type="text" name="" value="" readOnly></td>
+		</tr>
+		<tr>
+			<th>주소</th>
+			<td><input type="text" name="addr" value="addr" readOnly></td>
+		</tr>
+		<tr>
+			<th>번호</th>
+			<td><input type="text" name="number" value="number" readOnly></td>
+		</tr>
+		<tr>
+			<th>Email</th>
+			<td><input type="text" name="email" value="email" readOnly></td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<td colspan="2"><h3>운전면허정보</h3></td>
+		</tr>
+		<tr>
+			<th>면허구분</th>
+			<td><input type="text" name="" value="" readOnly></td>
+		</tr>
+		<tr>
+			<th>면허종류</th>
+			<td><input type="text" name="" value="" readOnly></td>
+		</tr>
+		<tr>
+			<th>면허증번호</th>
+			<td><input type="text" name="lic_num" value="lic_num" readOnly></td>
+		</tr>
+		<tr>
+			<th>면허발급일자</th>
+			<td><input type="text" name="lic_date " value="lic_date" readOnly></td>
 
-				</tr>
-				<tr>
-					<td>적성검사일</td>
-					<td><input type="text" name="lic_test" value="lic_test" readOnly></td>
-				</tr>
-				<tr>
-					<td colspan="6" align="right" >
-						<input type="button" value="뒤로">
-					</td>
-				</tr>
-		</table>
-	</fieldset>
-</div>
+		</tr>
+		<tr>
+			<th>적성검사일</th>
+			<td><input type="text" name="lic_test" value="lic_test" readOnly></td>
+		</tr>
+		<tr>
+			<td colspan="6" align="right" >
+				<input type="button" value="뒤로" style="background-color:#99ccff" onclick="javascript:location.href='admCustInfo.jsp'"/>
+			</td>
+		</tr>
+	</table>
+</form>
 </body>
 </html>

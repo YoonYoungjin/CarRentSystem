@@ -5,14 +5,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원관리(회원정보)</title>
-<style type="text/css">
+<style>
+ input{border:solid gray 1px}
+ table{width:100%}
+ tr,th,td{border:1px gray solid; text-align:center;padding:3px}
+ th{color: purple;}
+ h3{text-align:center; color: red;}
 </style>
+<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
 </head>
 <body>
-<div align="center">
-	<table cellpadding="32">
-		<tr>
-			<td colspan="6" align="center">
+<form method="post" name="f">
+	<table height="100" >
+		<tr	bgcolor="pink">
+			<td>
 				<input type="button" value="차량등록" onclick="javascript:location.href='admCarAdd.jsp'">
 				<input type="button" value="요금관리" onclick="javascript:location.href='admCarFeeInfo.jsp'">
 				<input type="button" value="예약관리" onclick="javascript:location.href='admCustContInfo.jsp'">
@@ -22,30 +28,41 @@
 			</td>
 		</tr>
 	</table>
-</div>
-<div align="center">
-	<fieldset style="width: 750px;">
-		<h3 align="left">○ 회원 정보</h3>
-			<table border="1" cellpadding="5" width="700">
-				<tr>
-					<th>No</th>
-					<th>아이디</th>
-					<th>이름</th>
-					<th>생년월일</th><th>성별</th><th>주소</th><th>휴대전화</th><th>이메일</th>
-				</tr>
-				<tr align="center">
-					<td>1</td>
-					<td><a href="admCustInfo_in.jsp">id</a></td>
-					<td>Cristiano</td>
-					<td>1900208</td>
-					<td>남</td><td>신촌</td><td>0111111111</td><td>1@1.com</td>
-				</tr>
-				<tr><td colspan="8" align="right"><select>
-				<option>아이디</option><option>이름</option><option>이메일</option><option>휴대전화</option>
+	<h3>○ 회원 정보</h3>
+	<table>
+		<tr>
+			<th colspan="8">
+				<select>
+				<option>아이디</option>
+				<option>이름</option>
+				<option>이메일</option>
+				<option>휴대전화</option>
 				</select> 
-				<input type="text" ><input type="button" value="검색"> </td></tr>
-			</table>
-	</fieldset>
-</div>
+				<input type="text" >
+				<input type="button" value="검색" style="background-color:#99ccff">
+			</th>
+		</tr>
+		<tr>
+			<th>No</th>
+			<th>아이디</th>
+			<th>이름</th>
+			<th>생년월일</th>
+			<th>성별</th>
+			<th>주소</th>
+			<th>휴대전화</th>
+			<th>이메일</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td><a href="admCustInfo_in.jsp">id</a></td>
+			<td>Cristiano</td>
+			<td>1900208</td>
+			<td>남</td>
+			<td>신촌</td>
+			<td>0111111111</td>
+			<td>1@1.com</td>
+		</tr>
+	</table>
+</form>
 </body>
 </html>

@@ -7,13 +7,13 @@
 <title>메인화면</title>
 <script type="text/javascript">
 function join(f) {
-	f.action="contCar.jsp";
+	f.action="";
 	f.submit();
 }
 </script>
 </head>
 <body>
-
+<form method="post" name="f">
 	<table width="960" height="600" align="center" >
 		<tr align="center">
 			<td colspan="2">
@@ -38,6 +38,6 @@ function join(f) {
 			</td>
 		</tr>
 	 </table>
-
+</form>
 </body>
 </html>

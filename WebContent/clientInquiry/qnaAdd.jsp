@@ -5,11 +5,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Q&A등록</title>
+<style>
+ input{border:solid gray 1px;}
+ table{width:100%}
+ th,td{border:1px gray solid; text-align:center;padding:3px}
+ th{color: purple;}
+ h3{color: navy;}
+</style>
+<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
 </head>
 <body>
-<form>
-	<table cellpadding="50" align="center">
-		<tr  align="center">
+<form name="f" method="post">
+	<table height="100">
+		<tr bgcolor="pink">
 			<td>
 				<input type="button" value="홈으로" onclick="javascript:location.href='index.jsp'">
 				<input type="button" value="실시간예약" onclick="javascript:location.href='contCar.jsp'"/>
@@ -19,9 +27,12 @@
 			</td>
 		</tr>
 	</table>
-	<table border="1" align="center" width="650" height="550">
+	<table>
 		<tr>
-			<td style="text-align: left;"><br>
+			<td bgcolor="lightgray"><h3> ● Q&A등록</h3></td>
+		</tr>
+		<tr>
+			<th><br>
 				성명 : db<br><br>
 				연락처 : db<br><br>
 				이메일 : db<br><br>
@@ -35,12 +46,12 @@
 				<br><br>
 				패스워드 : <input type="text" name="" value=""/><br><br>
 				내용 : <br>
-				<textarea style="width: 80%; height: 30%">
+				<textarea style="width: 70%; height: 200px">
 				</textarea><br><br>
-			</td>	
+			</th>	
 		</tr>
 		<tr>
-			<td align="right">
+			<td>
 				<input type="button" value="완료" style="background-color:#99ccff" onclick=""/>
 				<input type="reset" value="취소" style="background-color:#99ccff"/>
 			</td>

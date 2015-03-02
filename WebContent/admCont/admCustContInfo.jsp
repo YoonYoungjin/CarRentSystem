@@ -5,12 +5,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>예약관리(고객예약정보)</title>
+<style>
+ input{border:solid gray 1px}
+ table{width:100%}
+ tr,th,td{border:1px gray solid; text-align:center;padding:3px}
+ th{color: purple;}
+ h3{text-align:center; color: red;}
+</style>
+<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
 </head>
 <body>
-<div>
-	<table align="center" height="90" >
-		<tr>
-			<td colspan="6">
+<form method="post" name="f">
+	<table height="100" >
+		<tr	bgcolor="pink">
+			<td>
 				<input type="button" value="차량등록" onclick="javascript:location.href='admCarAdd.jsp'">
 				<input type="button" value="요금관리" onclick="javascript:location.href='admCarFeeInfo.jsp'">
 				<input type="button" value="예약관리" onclick="javascript:location.href='admCustContInfo.jsp'">
@@ -20,31 +28,25 @@
 			</td>
 		</tr>
 	</table>
-</div>
-<div>
-	<fieldset>
-		<table cellpadding="2" align="center" style="width: 70%" >
-			<tr align="center">
-				<td>
-					<input type="text" style="width: 6%"/>년
-					<input type="text" style="width: 6%"/>월
-					<input type="text" style="width: 6%"/>일
-					~
-					<input type="text" style="width: 6%"/>년
-					<input type="text" style="width: 6%"/>월
-					<input type="text" style="width: 6%"/>일
-					&nbsp;
-					고객명 
-					<input type="text" style="width: 20%"/>&nbsp;
-					<input type="button" value="검색"/></td>
-			</tr>
-		</table>
-	</fieldset>
-</div>
-<br/>
-<div>
-	<table width="550" cellpadding="6" align="center" >
-		<tr bgcolor="#99ccff">
+	<h3>○ 고객예약정보조회</h3>
+	<table>
+		<tr>
+			<th>
+				<input type="text" style="width: 6%"/>년
+				<input type="text" style="width: 6%"/>월
+				<input type="text" style="width: 6%"/>일
+				~
+				<input type="text" style="width: 6%"/>년
+				<input type="text" style="width: 6%"/>월
+				<input type="text" style="width: 6%"/>일
+				&nbsp;
+				고객명 : 
+				<input type="text" style="width: 20%"/>&nbsp;
+				<input type="button" value="검색" style="background-color:#99ccff"/></th>
+		</tr>
+	</table>
+	<table>
+		<tr>
 			<th>No</th>
 			<th>고객이름</th>
 			<th>고객전화번호</th>
@@ -63,7 +65,6 @@
 			<td>금액</td>
 		</tr>
 	</table>
-</div>
-
+</form>
 </body>
 </html>

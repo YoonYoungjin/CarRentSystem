@@ -5,62 +5,58 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>요금조회</title>
-<style type="text/css">
-#header {
-	margin-top: 30px;
-} 
- #content {
-	margin-top: 40px;
-} 
+<style>
+ input{border:solid gray 1px}
+ table{width:100%}
+ tr,th,td{border:1px gray solid; text-align:center;padding:3px}
+ th{color: purple;}
+ h3{text-align:center; color: red;}
 </style>
+<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
 </head>
 <body>
-	<div align="center" >
-		<table cellpadding="30">
-			<tr>
-				<td><input type="button" value="차량등록" onclick="javascript:location.href='admCarAdd.jsp'">
-				<input type="button" value="요금관리" onclick="javascript:location.href='admCarFeeInfo.jsp'">
-				<input type="button" value="예약관리" onclick="javascript:location.href='admCustContInfo.jsp'">
-				<input type="button" value="Q & A" onclick="javascript:location.href='admQnaInfo.jsp'">
-				<input type="button" value="장기견적관리" onclick="javascript:location.href='admEstmInquiryInfo.jsp'">
-				<input type="button" value="회원관리" onclick="javascript:location.href='admCustInfo.jsp'"></td>
-			</tr>
-		</table>
-	</div>
-	<div>
-		<h3 align="center">○ 요금조회</h3>
-			<table cellpadding="5" align="center" >
-				<tr>
-					<td align="right">
-						요금등급 <select>
-						<option value="골라골라">골라골라</option>
-						</select>
-						<input type="button" value="검색">&nbsp;
-						<input type="button" value="등록">
-					</td>
-				</tr>
-			</table>
-			<table border="1" width="550px" cellpadding="5" align="center">
-				<tr>
-					<th>No</th>
-					<th>요금등급</th>
-					<th>1일</th>
-					<th>2일</th>
-					<th>3일</th>
-					<th>4일</th>
-					<th>5일</th>
-					<th>6일</th>
-					<th>7일</th>
-					<th>사용유무</th>
-				</tr>
-			</table>
-		<fieldset>
-			<table align="center">
-				<tr align="left">
-					<th>건수 : @@건</th>
-				</tr>
-			</table>
-		</fieldset>
-	</div>
+<form method="post" name="f">
+	<table height="100">
+		<tr	bgcolor="pink">
+			<td><input type="button" value="차량등록" onclick="javascript:location.href='admCarAdd.jsp'">
+			<input type="button" value="요금관리" onclick="javascript:location.href='admCarFeeInfo.jsp'">
+			<input type="button" value="예약관리" onclick="javascript:location.href='admCustContInfo.jsp'">
+			<input type="button" value="Q & A" onclick="javascript:location.href='admQnaInfo.jsp'">
+			<input type="button" value="장기견적관리" onclick="javascript:location.href='admEstmInquiryInfo.jsp'">
+			<input type="button" value="회원관리" onclick="javascript:location.href='admCustInfo.jsp'"></td>
+		</tr>
+	</table>
+	<h3>○ 요금조회</h3>
+	<table>
+		<tr>
+			<th>
+				요금등급 <select>
+				<option value="골라골라">골라골라</option>
+				</select>
+				<input type="button" value="검색" style="background-color:#99ccff" onclick=""/>&nbsp;
+				<input type="button" value="등록" style="background-color:#99ccff" onclick=""/>
+			</th>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<th>No</th>
+			<th>요금등급</th>
+			<th>1일</th>
+			<th>2일</th>
+			<th>3일</th>
+			<th>4일</th>
+			<th>5일</th>
+			<th>6일</th>
+			<th>7일</th>
+			<th>사용유무</th>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<td>건수</td>
+		</tr>
+	</table>
+</form>
 </body>
 </html>

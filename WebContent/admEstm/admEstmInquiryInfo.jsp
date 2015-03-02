@@ -5,54 +5,56 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>장기견적문의내역</title>
-<style type="text/css">
+<style>
+ input{border:solid gray 1px}
+ table{width:100%}
+ tr,th,td{border:1px gray solid; text-align:center;padding:3px}
+ th{color: purple;}
+ h3{text-align:center; color: red;}
 </style>
+<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
 </head>
 <body>
-	<div >
-		<table align="center" height="90" >
-			<tr>
-				<td>
-					<input type="button" value="차량등록" onclick="javascript:location.href='admCarAdd.jsp'">
-					<input type="button" value="요금관리" onclick="javascript:location.href='admCarFeeInfo.jsp'">
-					<input type="button" value="예약관리" onclick="javascript:location.href='admCustContInfo.jsp'">
-					<input type="button" value="Q & A" onclick="javascript:location.href='admQnaInfo.jsp'">
-					<input type="button" value="장기견적관리" onclick="javascript:location.href='admEstmInquiryInfo.jsp'">
-					<input type="button" value="회원관리" onclick="javascript:location.href='admCustInfo.jsp'">
-				</td>
-			</tr>
-		</table>
-	</div>
-	<div id="a" align="center">
-		<table cellpadding="5" width="400" >
-			<tr>
-				<td>날짜:&nbsp;
-					<input type="text" value="" style="width: 20%"/>&nbsp;&nbsp;
-					고객명:&nbsp;
-					<input type="text" value="" style="width: 20%"/>&nbsp;&nbsp;
-					<input type="button" value="조회"/></td>
-			</tr>
-		</table>
-	</div>
-	<div align="center">
-		<fieldset style="width: 650px;">
-			<table cellpadding="5" width="650" border="1" >
-				<tr bgcolor="#99ccff">
-					<th>No</th>
-					<th>날짜</th>
-					<th>성명</th>
-					<th>견적내용</th>
-					<th>전화번호</th>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>날짜</td>
-					<td>성명</td>
-					<td>견적내용</td>
-					<td><a href="admQnaInfoDetail.jsp">전화번호</a></td>
-				</tr>
-			</table>
-		</fieldset>
-	</div>
+<form method="post" name="f">
+	<table height="100" >
+		<tr	bgcolor="pink">
+			<td>
+				<input type="button" value="차량등록" onclick="javascript:location.href='admCarAdd.jsp'">
+				<input type="button" value="요금관리" onclick="javascript:location.href='admCarFeeInfo.jsp'">
+				<input type="button" value="예약관리" onclick="javascript:location.href='admCustContInfo.jsp'">
+				<input type="button" value="Q & A" onclick="javascript:location.href='admQnaInfo.jsp'">
+				<input type="button" value="장기견적관리" onclick="javascript:location.href='admEstmInquiryInfo.jsp'">
+				<input type="button" value="회원관리" onclick="javascript:location.href='admCustInfo.jsp'">
+			</td>
+		</tr>
+	</table>
+	<h3>○ 장기견적문의내역조회</h3>
+	<table>
+		<tr>
+			<th>날짜 : 
+				<input type="text" value="" style="width: 20%"/>&nbsp;&nbsp;
+				고객명 : 
+				<input type="text" value="" style="width: 20%"/>&nbsp;&nbsp;
+				<input type="button" value="조회" style="background-color:#99ccff" onclick=""/>
+			</th>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<th>No</th>
+			<th>날짜</th>
+			<th>성명</th>
+			<th>견적내용</th>
+			<th>전화번호</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>날짜</td>
+			<td>성명</td>
+			<td>견적내용</td>
+			<td><a href="admCustEstmInquiryDetail.jsp">전화번호</a></td>
+		</tr>
+	</table>
+</form>
 </body>
 </html>

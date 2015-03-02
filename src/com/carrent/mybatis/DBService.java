@@ -10,7 +10,7 @@ public class DBService {
 	static{
 		try {
 			factory = new SqlSessionFactoryBuilder()
-			.build(Resources.getResourceAsReader("com/hb/config.xml"));
+			.build(Resources.getResourceAsReader("com.carrent.mybatis/config.xml"));
 		} catch (Exception e) {
 			
 		}
