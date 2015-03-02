@@ -4,14 +4,21 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
 <mapper namespace="client">
-	<select id="login" resultType="com.carrent.vo" parameterType="String">
+	<select id="login" resultType="com.carrent.vo.CustVo" parameterType="String">
 		SELECT CUST_ID, CUST_PWD, CUST_NAME, CUST_GENDER ,
-              CUST_BIRTHDAY, CUST_PHONE , ZIP_CODE,
-              BAS_ADDR, EXT_ADDR, CUST_EMAIL, LICENSE_TYPE,
-              LICENSE_FDATE, LICENSE_TDATE, REG_DATE, MOD_DATE 
-        FROM  T_CUST
-        WHERE CUST_ID = #{CUST_ID} AND CUST_PWD = #{CUST_PWD}
+               CUST_BIRTHDAY, CUST_PHONE , ZIP_CODE,
+               BAS_ADDR, EXT_ADDR, CUST_EMAIL, LICENSE_TYPE,
+               LICENSE_FDATE, LICENSE_TDATE, REG_DATE, MOD_DATE 
+        FROM   T_CUST
+        WHERE  CUST_ID = #{CUST_ID} AND CUST_PWD = #{CUST_PWD}
 	</select>
+	<select id="region" resultType="com.carrent.vo.BasicVo" parameterType="String">
+	    SELECT BIS_ID, BIS_CONAME, BIS_SEQ, BIS_REM from T_BASIC  WHERE  BIS_SEQ ='04'
+	</select>	   
+	<select id="branch" resultType="">
+	     SELECT COM_ID, COM_CONAME WHERE BIS_ID = ${BIS_ID}
+	</select>
+	
 </mapper>
 
 

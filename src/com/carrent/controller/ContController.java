@@ -35,7 +35,7 @@ public class ContController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("¤·¤µ¤·?");
+		System.out.println("ì—¬ê¸°ì˜¨ë‹¤1");
 	}
 
 }
