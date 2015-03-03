@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="admin">
+	<select id="admlogin" resultType="com.carrent.vo.CustVo" parameterType="String">
+		 select a.userid, a.userpassword,a.cn,(select b.ou from orgunit b where b.kid = a.oukid)deptname,
+           a.oukid,a.description from person a where a.userid =${} and a.userpassword =${}
+	</select>
+</mapper>
+
+
+
+
+
+
+
+	

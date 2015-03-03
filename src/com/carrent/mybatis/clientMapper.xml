@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="client">
+	<select id="login" resultType="com.carrent.vo.CustVo" parameterType="String">
+		SELECT CUST_ID, CUST_PWD, CUST_NAME, CUST_GENDER ,
+               CUST_BIRTHDAY, CUST_PHONE , ZIP_CODE,
+               BAS_ADDR, EXT_ADDR, CUST_EMAIL, LICENSE_TYPE,
+               LICENSE_FDATE, LICENSE_TDATE, REG_DATE, MOD_DATE 
+        FROM   T_CUST
+        WHERE  CUST_ID = #{CUST_ID} AND CUST_PWD = #{CUST_PWD}
+	</select>
+	<update id ="updatelogin"  parameterType="String">
+	    UPDATE  T_CUST SET CUST_PWD = ${CUST_PWD},
+                 CUST_NAME=${CUST_NAME}, CUST_GENDER = ${CUST_GENDER} ,
+                 CUST_BIRTHDAY=${CUST_BIRTHDAY}, CUST_PHONE = ${CUST_PHONE} , ZIP_CODE = ${ZIP_CODE},
+                 BAS_ADDR = ${BAS_ADDR}, EXT_ADDR = ${EXT_ADDR}, CUST_EMAIL = ${CUST_EMAIL},
+                 LICENSE_TYPE = ${LICENSE_TYPE}, LICENSE_FDATE = ${LICENSE_FDATE},
+                 LICENSE_TDATE = ${LICENSE_TDATE},  MOD_DATE = SYSDATE 
+          WHERE  CUST_ID = #{CUST_ID} 
+	</update>
+	<delete id ="dellogin"  parameterType="String">
+	      DELETE FROM T_CUST  WHERE  CUST_ID = #{CUST_ID} AND CUST_PWD = #{CUST_PWD} 
+	</delete>
+	
+	<select id="region" resultType="com.carrent.vo.BasicVo" parameterType="String">
+	    SELECT BIS_CODE, BIS_CONAME, BIS_SEQ, BIS_REM from T_BASIC  WHERE  BIS_SEQ ='04'
+	</select>	   
+	<select id="branch" resultType="com.carrent.vo.CarmstVo" parameterType="String" >
+	     SELECT CAR_BRANDCODE,CAR_BRAND,BRANCH_ID,BRANCH_NAME , CAR_NAME, RENT_LVLCODE
+         FROM T_CARMST
+         WHERE BRANCH_ID =${COM_ID}
+	</select>
+	<select id="rentfee" resultType="com.carrent.vo.CarmstVo" parameterType="String" >
+	    SELECT  (RENT_FEE01 * #{선택요일})RENT_FEE 
+          FROM T_RENT_FEE 
+          WHERE  RENT_LVLCODE =  #{T_CARMST.RENT_LVLCODE }            
+	</select>
+	
+	<insert id="insertcont" parameterType="String">
+	    INSERT INTO T_CONT VALUES ( 
+        SELECT REPLACE((TO_CHAR(SYSDATE, 'YYYYMMDD')||TO_CHAR(NVL(MAX(SUBSTR(CONT_NO,9,6)),'000000')+1,'000000')),' ','')FROM T_CONT,
+        #{CUST_ID}, #{CAR_GID}, #{CONT_SEQ}, #{CAR_NO}, #{CONT_FROM}, #{CONT_END},#{ RENT_DAY}, #{RENT_COST} , #{CARD_COP},                  
+        #{CARD_NO} , #{CARD_EXP_DATE} ,#{ CARD_OWNER} ,                  
+        #{LICENSE_TDATE} , SYSDATE , #{회원ID} , SYSDATE,#{회원ID})
+	</insert>
+	<update id="canclecont" parameterType="String">
+	    UPDATE T_CONT SET  CONT_SEQ ='02' FROM T_CONT WHERE CONT_NO = ${CONT_NO}
+	</update>
+	<select id="searchcont" resultType="com.carrent.vo.ContVo" parameterType="String" >
+	   SELECT  CONT_NO ,  CUST_ID, CAR_GID, CONT_SEQ, CAR_NO, CONT_FROM,
+                CONT_END ,  RENT_DAY, RENT_COST , CARD_COP , CARD_NO,
+                CARD_EXP_DATE ,  CARD_OWNER ,  LICENSE_TDATE,  REG_DATE , 
+                REG_USERID , MOD_DATE ,  MOD_USERID
+         FROM   T_CONT WHERE CUST_ID =#{CUST_ID} 
+	</select>
+	<select id="detailcont" resultType="com.carrent.vo.ContVo" parameterType="String" >
+	   SELECT  CONT_NO ,  CUST_ID, CAR_GID, CONT_SEQ, CAR_NO, CONT_FROM,
+                CONT_END ,  RENT_DAY, RENT_COST , CARD_COP , CARD_NO,
+                CARD_EXP_DATE ,  CARD_OWNER ,  LICENSE_TDATE,  REG_DATE , 
+                REG_USERID , MOD_DATE ,  MOD_USERID
+         FROM   T_CONT WHERE CONT_NO =#{CONT_NO} 
+	</select>
+	<insert id="insertestm" parameterType="String">
+	     INSERT INTO T_ESTM VALUES(
+              SELECT REPLACE('E'||(TO_CHAR(SYSDATE, 'YYYYMMDD')||TO_CHAR(NVL(MAX(SUBSTR(CONT_NO,9,6)),'000000')+1,'000000')),' ','') FROM T_CONT,
+              ESTM_SEQ = '01' , CUST_ID =${}, ESTM_CUSTNAME =${}, ESTM_PHONE =${}, STM_CARCOPRID =${},ESTM_CARNAME =${},                 
+              ESTM_FUELTYPE =${}, ESTM_RENTDAY =${},ESTM_STEPBY =${}, SYSDATE , REG_USERID = ${} , SYSDATE, MOD_USERID =${})
+	
+	</insert>
+	<select id="searchestm" resultType="com.carrent.vo.EstmVo" parameterType="String">
+	    SELECT  ESTM_NO, ESTM_SEQ, CUST_ID, ESTM_CUSTNAME, ESTM_PHONE, ESTM_CARCOPRID, ESTM_CARNAME , ESTM_FUELTYPE , ESTM_RENTDAY ,
+                ESTM_STEPBY, REG_DATE, REG_USERID , MOD_DATE , MOD_USERID
+          FROM  T_ESTM  WHERE ESTM_NO = ${}  
+	</select>
+	<select id="reqlist" resultType="com.carrent.vo.ReqVo" parameterType="String">
+	
+	</select>
+	
+	
+</mapper>
+
+
+
+
+
+
+
+	
