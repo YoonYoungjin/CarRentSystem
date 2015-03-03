@@ -20,6 +20,22 @@ function go(){
  h3{color: navy;}
  th{color: purple;}
 </style>
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script>
+	$(function() {
+		
+		alert("씨발제발Tbqk..");
+		$("#calendar").datepicker();
+		$("#calendar").datepicker("option", "dateFormat", "yy년-mm월-dd일");
+		$("#calendar").datepicker("option", "showAnim", "slideDown");
+		$("#calendar2").datepicker();
+		$("#calendar2").datepicker("option", "dateFormat", "yy년-mm월-dd일");
+		$("#calendar2").datepicker("option", "showAnim", "slideDown");
+	});
+</script>
 </head>
 <body>
 <form name="f" method="post">
@@ -30,21 +46,9 @@ function go(){
 		</tr>
 		<tr>
 			<th><br>
-				대여날짜 : <input type="text" name=""/>
-				<select name="time1">
-				<option value=""></option>
-				</select>
-				<select name="miute1">
-				<option value=""></option>
-				</select>
+				대여날짜 :  <input type="text" id="calendar">
 				<br><br>
-				반납날짜 : <input type="text" name=""/>
-				<select name="time2">
-				<option value=""></option>
-				</select>
-				<select name="miute2">
-				<option value=""></option>
-				</select>
+				반납날짜 :   <input type="text" id="calendar2">
 				<br><br>
 				대여지점 : <select name="local1">
 				<option value=""></option>
